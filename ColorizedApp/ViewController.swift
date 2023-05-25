@@ -23,7 +23,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorPalette.layer.cornerRadius = 20
+        colorPalette.layer.cornerRadius = 40
+        colorPalette.layer.cornerCurve = .continuous
         setupSliders()
         setupValueLabels()
     }
