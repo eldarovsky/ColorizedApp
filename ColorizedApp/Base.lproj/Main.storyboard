@@ -25,8 +25,8 @@
                                     <constraint firstAttribute="width" secondItem="VcL-IK-Y7n" secondAttribute="height" multiplier="1:1" id="39I-MZ-Bnp"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="center" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B3A-RX-hwQ">
-                                <rect key="frame" x="16" y="672" width="382" height="130"/>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="B3A-RX-hwQ">
+                                <rect key="frame" x="16" y="642" width="382" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lXH-HW-vGq" userLabel="Red Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -64,7 +64,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Sh-JE-wsd" userLabel="Green Stack View">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="65" width="382" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jNt-Ga-Gei" userLabel="Green Labels Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -99,7 +99,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3XI-Ev-KKE" userLabel="Blue Stack View">
-                                        <rect key="frame" x="0.0" y="100" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="130" width="382" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sby-JH-geH" userLabel="Blue Labels Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
