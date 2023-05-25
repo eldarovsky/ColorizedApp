@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: - IBOutlets
-    @IBOutlet var redColorPalette: UIView!
-    @IBOutlet var greenColorPalette: UIView!
-    @IBOutlet var blueColorPalette: UIView!
+    @IBOutlet var colorPalette: UIView!
 
     @IBOutlet var redValueLabel: UILabel!
     @IBOutlet var greenValueLabel: UILabel!
@@ -25,45 +23,43 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorPalette.layer.cornerRadius = 20
         setupSliders()
         setupValueLabels()
-    }
-
-    override func viewWillLayoutSubviews() {
-        redColorPalette.layer.cornerRadius = 20
-        redColorPalette.layer.borderWidth = 2
-        redColorPalette.layer.borderColor = UIColor.black.cgColor
-
-        greenColorPalette.layer.cornerRadius = 20
-        greenColorPalette.layer.borderWidth = 2
-        greenColorPalette.layer.borderColor = UIColor.black.cgColor
-
-        blueColorPalette.layer.cornerRadius = 20
-        blueColorPalette.layer.borderWidth = 2
-        blueColorPalette.layer.borderColor = UIColor.black.cgColor
-
-        redValueLabel.text = String(format: "%.2f", redColorSlider.value)
-        greenValueLabel.text = String(format: "%.2f", greenColorSlider.value)
-        blueValueLabel.text = String(format: "%.2f", blueColorSlider.value)
     }
 
     // MARK: - IBActions
     @IBAction func redSliderAction() {
         redValueLabel.text = String(format: "%.2f", redColorSlider.value)
-//        redColorPalette.alpha = CGFloat(redColorSlider.value.rounded())
-        redColorPalette.backgroundColor = view.backgroundColor?.withAlphaComponent(CGFloat(redColorSlider.value))
+
+        colorPalette.backgroundColor = UIColor(
+            red: CGFloat(redColorSlider.value),
+            green: CGFloat(greenColorSlider.value),
+            blue: CGFloat(blueColorSlider.value),
+            alpha: 1
+        )
     }
 
     @IBAction func greenSliderAction() {
         greenValueLabel.text = String(format: "%.2f", greenColorSlider.value)
-//        greenColorPalette.alpha = CGFloat(greenColorSlider.value.rounded())
-        greenColorPalette.backgroundColor = view.backgroundColor?.withAlphaComponent(CGFloat(greenColorSlider.value))
+
+        colorPalette.backgroundColor = UIColor(
+            red: CGFloat(redColorSlider.value),
+            green: CGFloat(greenColorSlider.value),
+            blue: CGFloat(blueColorSlider.value),
+            alpha: 1
+        )
     }
 
     @IBAction func blueSliderAction() {
         blueValueLabel.text = String(format: "%.2f", blueColorSlider.value)
-//        blueColorPalette.alpha = CGFloat(blueColorSlider.value.rounded())
-        blueColorPalette.backgroundColor = view.backgroundColor?.withAlphaComponent(CGFloat(blueColorSlider.value))
+
+        colorPalette.backgroundColor = UIColor(
+            red: CGFloat(redColorSlider.value),
+            green: CGFloat(greenColorSlider.value),
+            blue: CGFloat(blueColorSlider.value),
+            alpha: 1
+        )
     }
 
     // MARK: - Private Methods
@@ -82,9 +78,8 @@ class ViewController: UIViewController {
     }
 
     private func setupValueLabels() {
-        redValueLabel.text = redColorSlider.value.formatted()
-        greenValueLabel.text = greenColorSlider.value.formatted()
-        blueValueLabel.text = blueColorSlider.value.formatted()
+        redValueLabel.text = String(format: "%.2f", redColorSlider.value)
+        greenValueLabel.text = String(format: "%.2f", greenColorSlider.value)
+        blueValueLabel.text = String(format: "%.2f", blueColorSlider.value)
     }
 }
-
