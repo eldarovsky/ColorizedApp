@@ -19,7 +19,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-IK-Y7n" userLabel="сolorPalette">
                                 <rect key="frame" x="16" y="68" width="382" height="382"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="VcL-IK-Y7n" secondAttribute="height" multiplier="1:1" id="39I-MZ-Bnp"/>

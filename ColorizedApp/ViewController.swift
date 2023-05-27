@@ -25,57 +25,34 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         colorPalette.layer.cornerRadius = 40
         colorPalette.layer.cornerCurve = .continuous
-        setupSliders()
+        setupColor()
         setupValueLabels()
     }
 
     // MARK: - IBActions
     @IBAction func redSliderAction() {
         redValueLabel.text = String(format: "%.2f", redColorSlider.value)
-
-        colorPalette.backgroundColor = UIColor(
-            red: CGFloat(redColorSlider.value),
-            green: CGFloat(greenColorSlider.value),
-            blue: CGFloat(blueColorSlider.value),
-            alpha: 1
-        )
+        setupColor()
     }
 
     @IBAction func greenSliderAction() {
         greenValueLabel.text = String(format: "%.2f", greenColorSlider.value)
-
-        colorPalette.backgroundColor = UIColor(
-            red: CGFloat(redColorSlider.value),
-            green: CGFloat(greenColorSlider.value),
-            blue: CGFloat(blueColorSlider.value),
-            alpha: 1
-        )
+        setupColor()
     }
 
     @IBAction func blueSliderAction() {
         blueValueLabel.text = String(format: "%.2f", blueColorSlider.value)
+        setupColor()
+    }
 
+    // MARK: - Private Methods
+    private func setupColor() {
         colorPalette.backgroundColor = UIColor(
             red: CGFloat(redColorSlider.value),
             green: CGFloat(greenColorSlider.value),
             blue: CGFloat(blueColorSlider.value),
             alpha: 1
         )
-    }
-
-    // MARK: - Private Methods
-    private func setupSliders() {
-        redColorSlider.value = 0
-        redColorSlider.minimumValue = 0
-        redColorSlider.maximumValue = 1
-
-        greenColorSlider.value = 0
-        greenColorSlider.minimumValue = 0
-        greenColorSlider.maximumValue = 1
-
-        blueColorSlider.value = 0
-        blueColorSlider.minimumValue = 0
-        blueColorSlider.maximumValue = 1
     }
 
     private func setupValueLabels() {
@@ -84,3 +61,4 @@ class ViewController: UIViewController {
         blueValueLabel.text = String(format: "%.2f", blueColorSlider.value)
     }
 }
+
